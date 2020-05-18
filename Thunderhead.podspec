@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
   s.library             = "sqlite3"
   s.source = { :git => "https://github.com/thunderheadone/one-sdk-ios-test.git", :tag => "#{s.version}" }
   s.platform            = :ios, "8.0"
-  s.public_header_files = "Thunderhead/One.h"
-  s.source_files        = "Thunderhead/One.h"
+  s.public_header_files = "Thunderhead/*.h"
+  s.source_files        = ["Thunderhead/*.h", "Thunderhead/Empty.m"]
   s.resources           = "Thunderhead/ThunderheadBundle.bundle"
   s.vendored_libraries  = "Thunderhead/libThunderhead.a"
 end
