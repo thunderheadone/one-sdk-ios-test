@@ -1,1 +1,1 @@
-# one-sdk-ios-test
+The Debug Thunderhead SDK for iOS
