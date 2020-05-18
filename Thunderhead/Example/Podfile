@@ -1,0 +1,6 @@
+use_frameworks!
+target 'Thunderhead_Tests' do
+  pod 'Thunderhead', :path => '../'
+  
+  
+end

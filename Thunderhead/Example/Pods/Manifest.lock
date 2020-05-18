@@ -1,0 +1,16 @@
+PODS:
+  - Thunderhead (0.1.0)
+
+DEPENDENCIES:
+  - Thunderhead (from `../`)
+
+EXTERNAL SOURCES:
+  Thunderhead:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Thunderhead: 9c79ff7969683b10efbfbbdb97f2707c084ba24a
+
+PODFILE CHECKSUM: 07a6895421a404527af78fa41e42e6da34ad978b
+
+COCOAPODS: 1.9.1
