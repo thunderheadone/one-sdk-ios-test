@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.public_header_files = "One.h"
   s.source_files        = "One.h"
   s.resources           = "ThunderheadBundle.bundle"
-  s.vendored_frameworks = "libThunderhead.a"
+  s.vendored_frameworks = "./libThunderhead.a"
 end
