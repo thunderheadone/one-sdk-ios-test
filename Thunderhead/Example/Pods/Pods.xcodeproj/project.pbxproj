@@ -11,6 +11,7 @@
 		71F051ABC90C4817A4E5F7F899D721CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		A9A3A0AC24732636006A6D4E /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A3A0AA24732636006A6D4E /* Empty.m */; };
 		A9A3A0AD24732636006A6D4E /* One.h in Headers */ = {isa = PBXBuildFile; fileRef = A9A3A0AB24732636006A6D4E /* One.h */; };
+		A9A3A0AF2473D782006A6D4E /* Thunderhead.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A9A3A0AE2473D782006A6D4E /* Thunderhead.podspec */; };
 		AFF0A891A2E7DD41A5B00C34EF8733BF /* Thunderhead-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4220E30E397DFEE96D0E3268B575AC8 /* Thunderhead-dummy.m */; };
 		B8D33C2C1E27AE0CDD6CC2FBCFB01D30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		D5E241A67A8358FB36277EBA32F8943F /* Thunderhead-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 78EF1EDB14105A93381755DDF604B064 /* Thunderhead-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -46,10 +47,10 @@
 		9FF94BFC4C397F23C809FBD723AD04FC /* Pods-Thunderhead_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Thunderhead_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A9A3A0AA24732636006A6D4E /* Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Empty.m; path = Thunderhead/Empty.m; sourceTree = "<group>"; };
 		A9A3A0AB24732636006A6D4E /* One.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = One.h; path = Thunderhead/One.h; sourceTree = "<group>"; };
+		A9A3A0AE2473D782006A6D4E /* Thunderhead.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Thunderhead.podspec; path = ../Thunderhead.podspec; sourceTree = "<group>"; };
 		B1A210FFC2C1CDCCBF4D059B27538F67 /* Thunderhead.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Thunderhead.modulemap; sourceTree = "<group>"; };
 		C7CF03C6155D6F96133EF21682331C85 /* Thunderhead.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Thunderhead.release.xcconfig; sourceTree = "<group>"; };
 		C7E9A1C41A8CB0656E701F64AB929FFF /* Pods-Thunderhead_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Thunderhead_Tests-umbrella.h"; sourceTree = "<group>"; };
-		D1AEAC521A222E60B9FDFDDD2CD2D23B /* Thunderhead.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Thunderhead.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		D4220E30E397DFEE96D0E3268B575AC8 /* Thunderhead-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Thunderhead-dummy.m"; sourceTree = "<group>"; };
 		DEEF9FD6DECADB2AAFB9995BDE2DD0D4 /* Pods-Thunderhead_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Thunderhead_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		FD56067148B1E9877462BBDD661EF31F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -105,7 +106,7 @@
 			children = (
 				778F692C233A2917AA6A2547B6D81F31 /* LICENSE */,
 				FD56067148B1E9877462BBDD661EF31F /* README.md */,
-				D1AEAC521A222E60B9FDFDDD2CD2D23B /* Thunderhead.podspec */,
+				A9A3A0AE2473D782006A6D4E /* Thunderhead.podspec */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -274,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A3A0AF2473D782006A6D4E /* Thunderhead.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
