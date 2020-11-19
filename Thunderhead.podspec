@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name                = "Thunderhead"
-  s.version             = "5.1.1-alpha-debug-11"
+  s.version             = "5.3.2-alpha-debug-1"
   s.summary             = "The Debug Thunderhead SDK for iOS, for integrating the ONE Engagement Hub or Interaction Studio into your iOS application."
   s.license             = { :type => "Commercial", :text => "Copyright (c) 2020 Thunderhead One Inc. All rights reserved." }
   s.authors             = { "Thunderhead ONE" => "onesupport@thunderhead.com"}
