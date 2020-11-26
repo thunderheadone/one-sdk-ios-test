@@ -14,6 +14,6 @@ let package = Package(
             targets: ["Thunderhead"]),
     ],
     targets: [
-        .binaryTarget(name: "Thunderhead", path: "Thunderhead.embeddedframework/Thunderhead.xcframework")
+        .binaryTarget(name: "Thunderhead", path: "Thunderhead.xcframework")
     ]
 )
