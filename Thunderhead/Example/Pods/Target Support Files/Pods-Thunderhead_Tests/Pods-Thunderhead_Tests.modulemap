@@ -1,6 +1,0 @@
-framework module Pods_Thunderhead_Tests {
-  umbrella header "Pods-Thunderhead_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}
