@@ -14,10 +14,7 @@ let package = Package(
             targets: ["Thunderhead"]),
     ],
     targets: [
-        .target(name: "ThunderheadBundle",
-                dependencies: [],
-                resources: [.copy("ThunderheadBundle.bundle")]
-        ),
+        
         .binaryTarget(name: "Thunderhead",
                       path: "Sources/Thunderhead.xcframework"
         )
