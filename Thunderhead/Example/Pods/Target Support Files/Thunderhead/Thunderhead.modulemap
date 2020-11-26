@@ -1,6 +1,0 @@
-framework module Thunderhead {
-  umbrella header "Thunderhead-umbrella.h"
-
-  export *
-  module * { export * }
-}
