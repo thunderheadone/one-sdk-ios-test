@@ -16,7 +16,7 @@ let package = Package(
     targets: [
         
         .binaryTarget(name: "Thunderhead",
-                      path: "Sources/Thunderhead.xcframework"
+                      path: "Thunderhead.xcframework"
         )
         
             
