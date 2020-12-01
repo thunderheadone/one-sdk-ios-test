@@ -11,13 +11,11 @@ let package = Package(
     products: [
         .library(
             name: "Thunderhead",
-            targets: ["Thunderhead", "ThunderheadFramework"]),
+            targets: ["Thunderhead"]),
     ],
     targets: [
-        .target(name: "Thunderhead", resources: [
-                    .process("ThunderheadBundle.bundle")]),
-        .binaryTarget(name: "ThunderheadFramework",
-                      path: "Sources/Thunderhead.xcframework"
+        .binaryTarget(name: "Thunderhead",
+                      path: "Sources/Thunderhead/Thunderhead.xcframework"
         )
         
             
