@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name                = "Thunderhead"
-  s.version             = "5.3.3-debug-1"
+  s.version             = "5.3.3-debug-6"
   s.summary             = "The Debug Thunderhead SDK for iOS, for integrating the ONE Engagement Hub or Interaction Studio into your iOS application."
   s.license             = { :type => "Commercial", :text => "Copyright (c) 2020 Thunderhead One Inc. All rights reserved." }
   s.authors             = { "Thunderhead ONE" => "onesupport@thunderhead.com"}
@@ -18,9 +18,9 @@ Pod::Spec.new do |s|
   s.library             = "sqlite3"
   s.source = { :git => "https://github.com/thunderheadone/one-sdk-ios-test.git", :tag => "#{s.version}" }
   s.platform            = :ios, "9.0"
-  s.preserve_paths      = "Sources/Thunderhead.xcframework"
-  s.public_header_files = "Sources/Thunderhead.xcframework/ios-arm64_armv7/Thunderhead.framework/Headers/One.h"
-  s.source_files        = "Sources/Thunderhead.xcframework/ios-arm64_armv7/Thunderhead.framework/Headers/One.h"
+  s.preserve_paths      = "Sources/Thunderhead/Thunderhead.xcframework"
+  s.public_header_files = "Sources/Thunderhead/Thunderhead.xcframework/ios-arm64_armv7/Thunderhead.framework/Headers/One.h"
+  s.source_files        = "Sources/Thunderhead/Thunderhead.xcframework/ios-arm64_armv7/Thunderhead.framework/Headers/One.h"
   s.resources           = "Sources/Thunderhead/ThunderheadBundle.bundle"
-  s.vendored_frameworks = "Sources/Thunderhead.xcframework"
+  s.vendored_frameworks = "Sources/Thunderhead/Thunderhead.xcframework"
 end
