@@ -1,5 +1,5 @@
 framework module Thunderhead {
-  umbrella header "One.h"
+  umbrella header "Thunderhead.h"
   
   export *
   module * { export * }
