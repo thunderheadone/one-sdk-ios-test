@@ -16,8 +16,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "Thunderhead",
-            url: "https://github.com/thunderheadone/one-sdk-ios-test/blob/master/Thunderhead.xcframework.zip",
-            checksum: "ed5347696f6b84a9e58cb465e7d885c0fde4aadbff844fc88894afe220ac6874"
+            path: "artifacts/Thunderhead.xcframework"
         )
     ]
 )
