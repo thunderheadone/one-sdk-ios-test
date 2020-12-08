@@ -13,11 +13,17 @@ let package = Package(
             name: "Thunderhead",
             targets: ["Thunderhead"]),
     ],
+    dependencies: [],
     targets: [
         .binaryTarget(
             name: "Thunderhead",
             path: "Thunderhead.embeddedframework/Thunderhead.xcframework"
-
+        ),
+        .target(
+            name: "ThunderheadBundle",
+            path: "./Thunderhead.embeddedframework",
+            exclude: ["../Thunderhead.podspec, ../LICENSE.md, ../README.md"],
+            resources: [.copy("ThunderheadBundle.bundle")]
         )
     ]
 )
