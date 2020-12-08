@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.description         = "The Debug Thunderhead SDK for iOS, for integrating ONE or Interaction Studio into your iOS application. The SDK supports iOS 8.0 and above."
   s.frameworks          = ["Accelerate", "CoreLocation", "Foundation", "LocalAuthentication", "CoreGraphics", "MessageUI", "SafariServices", "Security", "SystemConfiguration", "UIKit", "WebKit", "UserNotifications"]
   s.library             = "sqlite3"
-  s.source              = { :https => "https://github.com/thunderheadone/one-sdk-ios-test/blob/master/Thunderhead.xcframework.zip" }
+  s.source              = { :http => "https://github.com/thunderheadone/one-sdk-ios-test/blob/master/Thunderhead.xcframework.zip" }
   s.source_files        = "One.h"
   s.platform            = :ios, "9.0"
   s.vendored_frameworks = "Thunderhead.embeddedframework/Thunderhead.xcframework"
