@@ -19,7 +19,6 @@ Pod::Spec.new do |s|
   s.source              = { :git => "https://github.com/thunderheadone/one-sdk-ios-test.git", :tag => "#{s.version}" }
   s.platform            = :ios, "9.0"
   s.preserve_paths      = "Thunderhead.embeddedframework/Thunderhead.xcframework"
-  s.source_files        = "One.h"
   s.resources           = "Thunderhead.embeddedframework/ThunderheadBundle.bundle"
   s.vendored_frameworks = "Thunderhead.embeddedframework/Thunderhead.xcframework"
 end
