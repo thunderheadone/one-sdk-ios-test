@@ -18,7 +18,9 @@ Pod::Spec.new do |s|
   s.library             = "sqlite3"
   s.source              = { :git => "https://github.com/thunderheadone/one-sdk-ios-test.git", :tag => "#{s.version}" }
   s.platform            = :ios, "9.0"
-  s.preserve_paths      = "Thunderhead.xcframework"
+  s.preserve_paths      = "Thunderhead.embeddedframework/Thunderhead.xcframework"
+  s.public_header_files = "Thunderhead.embeddedframework/Thunderhead.xcframework/ios-arm64_armv7/Thunderhead.framework/Headers/One.h"
+  s.source_files        = "Thunderhead.embeddedframework/Thunderhead.xcframework/ios-arm64_armv7/Thunderhead.framework/Headers/One.h"
   s.resources           = "Thunderhead.embeddedframework/ThunderheadBundle.bundle"
-  s.vendored_frameworks = "Thunderhead.xcframework"
+  s.vendored_frameworks = "Thunderhead.embeddedframework/Thunderhead.xcframework"
 end
