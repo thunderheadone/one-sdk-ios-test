@@ -13,7 +13,6 @@ let package = Package(
             name: "Thunderhead",
             targets: ["Thunderhead"]),
     ],
-    dependencies: [],
     targets: [
         .binaryTarget(
             name: "Thunderhead",
@@ -21,9 +20,11 @@ let package = Package(
         ),
         .target(
             name: "ThunderheadBundle",
-            path: "./Thunderhead.embeddedframework",
-            exclude: ["../Thunderhead.podspec, ../LICENSE.md, ../README.md"],
-            resources: [.copy("ThunderheadBundle.bundle")]
+            dependencies: [],
+            resources: [.process("Resources/Default.plist"),            .process("Resources/fontello.ttf"),
+                .process("Resources/InteractionStudio.plist"),
+                .process("Resources/thdc_waves.png")
+            ]
         )
     ]
 )
