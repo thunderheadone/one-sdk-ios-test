@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name                = "Thunderhead"
-  s.version             = "5.3.4-alpha-debug-1"
+  s.version             = "5.3.4-alpha-debug-2"
   s.summary             = "The Thunderhead SDK for iOS, for integrating the ONE Engagement Hub or Interaction Studio into your iOS application."
   s.authors             = { "Thunderhead ONE" => "onesupport@thunderhead.com"}
   s.homepage            = "https://github.com/thunderheadone/one-sdk-ios"
@@ -18,9 +18,11 @@ Pod::Spec.new do |s|
   s.library             = "sqlite3"
   s.source = { :git => "https://github.com/thunderheadone/one-sdk-ios.git", :tag => "#{s.version}" }
   s.platform            = :ios, "8.0"
-  s.preserve_paths      = "Thunderhead.embeddedframework/Thunderhead.framework"
-  s.resources           = "Thunderhead.embeddedframework/ThunderheadBundle.bundle"
-  s.vendored_frameworks = "Thunderhead.embeddedframework/Thunderhead.framework"
+  s.preserve_paths      = 'Thunderhead.embeddedframework/Thunderhead.framework'
+  s.public_header_files = 'Thunderhead.embeddedframework/Thunderhead.framework/Headers/One.h'
+  s.source_files        = 'Thunderhead.embeddedframework/Thunderhead.framework/Headers/One.h'
+  s.resources           = 'Thunderhead.embeddedframework/ThunderheadBundle.bundle'
+  s.vendored_frameworks = 'Thunderhead.embeddedframework/Thunderhead.framework'
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
