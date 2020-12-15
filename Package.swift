@@ -16,7 +16,7 @@ let package = Package(
     dependencies: [],
     targets: [
         .target(
-                name: "ThunderheadBundle",
+                name: "Thunderhead",
                 dependencies: [],
                 resources: [
                     .process("Default.plist"),
@@ -26,7 +26,7 @@ let package = Package(
                 ]
                 ),
         .binaryTarget(
-                    name: "Thunderhead",
+                    name: "ThunderheadFramework",
                     path: "Thunderhead.embeddedframework/Thunderhead.xcframework"
                     )
     ]
