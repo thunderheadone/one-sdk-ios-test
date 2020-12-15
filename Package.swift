@@ -11,7 +11,7 @@ let package = Package(
     products: [
         .library(
             name: "Thunderhead",
-            targets: ["Thunderhead", "ThunderheadBundle"]),
+            targets: ["Thunderhead"]),
     ],
     dependencies: [],
     targets: [
