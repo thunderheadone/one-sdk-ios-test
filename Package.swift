@@ -11,7 +11,7 @@ let package = Package(
     products: [
         .library(
             name: "Thunderhead",
-            targets: ["Thunderhead", "resource-spm"]),
+            targets: ["Thunderhead", "ThunderheadBundle"]),
     ],
     dependencies: [],
     targets: [
@@ -20,7 +20,7 @@ let package = Package(
                         path: "Thunderhead.embeddedframework/Thunderhead.xcframework"
                         ),
             .target(
-                    name: "resource-spm",
+                    name: "ThunderheadBundle",
                     dependencies: [],
                     resources: [
                         .process("Default.plist"),
