@@ -11,23 +11,24 @@ let package = Package(
     products: [
         .library(
             name: "Thunderhead",
-            targets: ["Thunderhead"]),
+            targets: ["ThunderheadBundle", "Thunderhead"]),
     ],
     dependencies: [],
     targets: [
+        .target(
+                name: "ThunderheadBundle",
+                dependencies: [],
+                resources: [
+                    .process("Default.plist"),
+                    .process("InteractionStudio.plist"),
+                    .process("fontello.ttf"),
+                    .process("thdc_waves.png")
+                ]
+                ),
             .binaryTarget(
                         name: "Thunderhead",
                         path: "Thunderhead.embeddedframework/Thunderhead.xcframework"
-                        ),
-            .target(
-                    name: "ThunderheadBundle",
-                    dependencies: [],
-                    resources: [
-                        .process("Default.plist"),
-                        .process("InteractionStudio.plist"),
-                        .process("fontello.ttf"),
-                        .process("thdc_waves.png")
-                    ]
-                    )
+                        )
+            
     ]
 )
