@@ -11,7 +11,7 @@ let package = Package(
     products: [
         .library(
             name: "Thunderhead",
-            targets: ["ThunderheadBundle", "Thunderhead"]),
+            targets: ["Thunderhead"]),
     ],
     dependencies: [],
     targets: [
@@ -25,10 +25,9 @@ let package = Package(
                     .process("thdc_waves.png")
                 ]
                 ),
-            .binaryTarget(
-                        name: "Thunderhead",
-                        path: "Thunderhead.embeddedframework/Thunderhead.xcframework"
-                        )
-            
+        .binaryTarget(
+                    name: "Thunderhead",
+                    path: "Thunderhead.embeddedframework/Thunderhead.xcframework"
+                    )
     ]
 )
