@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name                = "Thunderhead"
-  s.version             = "5.3.3"
+  s.version             = "5.3.24"
   s.summary             = "The Thunderhead SDK for iOS, for integrating the ONE Engagement Hub or Interaction Studio into your iOS application."
   s.authors             = { "Thunderhead ONE" => "onesupport@thunderhead.com"}
   s.homepage            = "https://github.com/thunderheadone/one-sdk-ios"
@@ -18,7 +18,10 @@ Pod::Spec.new do |s|
   s.library             = "sqlite3"
   s.source = { :git => "https://github.com/thunderheadone/one-sdk-ios.git", :tag => "#{s.version}" }
   s.platform            = :ios, "9.0"
-  s.preserve_paths      = "Thunderhead.embeddedframework/Thunderhead.xcframework"
-  s.resources           = "Thunderhead.embeddedframework/ThunderheadBundle.bundle"
-  s.vendored_frameworks = "Thunderhead.embeddedframework/Thunderhead.xcframework"
+  s.default_subspec     = 'Core'
+  s.subspec 'Core' do |core|
+    core.preserve_paths      = 'Thunderhead1.embeddedframework/Thunderhead.xcframework'
+    core.vendored_frameworks = 'Thunderhead1.embeddedframework/Thunderhead.xcframework'
+    core.resources           = 'Thunderhead1.embeddedframework/ThunderheadBundle.bundle'
+  end
 end

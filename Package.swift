@@ -13,21 +13,10 @@ let package = Package(
             name: "Thunderhead",
             targets: ["Thunderhead"]),
     ],
-    dependencies: [],
     targets: [
-        .target(
-                name: "Thunderhead",
-                dependencies: [],
-                resources: [
-                    .process("Default.plist"),
-                    .process("InteractionStudio.plist"),
-                    .process("fontello.ttf"),
-                    .process("thdc_waves.png")
-                ]
-                ),
         .binaryTarget(
-                    name: "ThunderheadFramework",
-                    path: "Thunderhead.embeddedframework/Thunderhead.xcframework"
-                    )
+            name: "Thunderhead",
+            path: "Thunderhead.embeddedframework/Thunderhead.xcframework"
+        )
     ]
 )
