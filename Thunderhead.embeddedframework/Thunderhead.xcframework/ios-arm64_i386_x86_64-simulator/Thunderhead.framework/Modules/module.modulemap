@@ -15,6 +15,5 @@ framework module Thunderhead {
   link framework "SystemConfiguration"
   link framework "UIKit"
   link framework "WebKit"
-  link framework "UserNotifications"
   link "sqlite3"
 }
