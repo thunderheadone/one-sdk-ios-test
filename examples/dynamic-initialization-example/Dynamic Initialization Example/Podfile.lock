@@ -1,0 +1,22 @@
+PODS:
+  - Thunderhead (5.0.0)
+
+DEPENDENCIES:
+  - Thunderhead (from `https://github.com/thunderheadone/one-sdk-ios.git`, tag `5.0.0`)
+
+EXTERNAL SOURCES:
+  Thunderhead:
+    :git: https://github.com/thunderheadone/one-sdk-ios.git
+    :tag: 5.0.0
+
+CHECKOUT OPTIONS:
+  Thunderhead:
+    :git: https://github.com/thunderheadone/one-sdk-ios.git
+    :tag: 5.0.0
+
+SPEC CHECKSUMS:
+  Thunderhead: 78e021f61ec04ff522b3186e90dec35235a6191c
+
+PODFILE CHECKSUM: 6e04d198caeb5b783584e0dc11a21736c6abaadf
+
+COCOAPODS: 1.8.4
