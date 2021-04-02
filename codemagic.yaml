@@ -25,7 +25,7 @@ workflows:
         name: Optimization App
         triggering: *triggering
         scripts:
-            - cd examples/optimizing-programmatically-using-json-example/Content\ Orchestration\ Example && pod install && xcodebuild build -workspace "Dynamic Initialization Example.xcworkspace" -scheme "Content Orchestration Example" CODE_SIGN_INDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+            - cd examples/optimizing-programmatically-using-json-example/Content\ Orchestration\ Example && xcodebuild build -workspace "Dynamic Initialization Example.xcworkspace" -scheme "Content Orchestration Example" CODE_SIGN_INDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
         publishing:
             email:
                 recipients:
@@ -34,4 +34,3 @@ workflows:
             - build/ios/ipa/*.ipa
             - /tmp/xcodebuild_logs/*.log
             - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
-            
