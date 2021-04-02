@@ -1,4 +1,4 @@
-![Nevercode build status](https://app.nevercode.io/api/projects/3744108b-e1a9-416a-80b2-ef0f0e405b97/workflows/4aece572-e257-461e-9b1c-3b449e3808d5/status_badge.svg?branch=master&style=shields)
+![Nevercode build status](https://api.codemagic.io/apps/5fa081c4d9ef133c26b630a8/dynamic-configuration-example/status_badge.svg)
 
 # Late Initialization and Reconfiguration Example 
 
