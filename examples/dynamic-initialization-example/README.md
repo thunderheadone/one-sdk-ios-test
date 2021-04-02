@@ -1,4 +1,6 @@
 ![Nevercode build status](https://api.codemagic.io/apps/5fa081c4d9ef133c26b630a8/dynamic-configuration-example/status_badge.svg)
+[![Codemagic build status](https://api.codemagic.io/apps/5fa081c4d9ef133c26b630a8/dynamic-configuration-example/status_badge.svg)](https://codemagic.io/apps/5fa081c4d9ef133c26b630a8/dynamic-configuration-example/latest_build)
+
 
 # Late Initialization and Reconfiguration Example 
 
