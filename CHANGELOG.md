@@ -1,3 +1,32 @@
+#### Version 7.0.0
+* [BREAKING] Removed deprecated `optOut` method from Thunderhead SDK.
+
+#### Version 6.3.3
+* [BUGFIX] Fixed a crash related to handling a deallocated `View Controller` hosting `WKWebView`.
+
+#### Version 6.3.2
+* [BUGFIX] Fixed a crash related to handling `View Controllers` that are deallocated.
+* [BUGFIX] Fixed an issue where codeless Interactions may not be sent after dismissing a `View Controller` that was presented modally.
+
+#### Version 6.3.1
+* [BUGFIX] Fixed a crash that was occurring when tracking WKWebView interactions.
+* [BUGFIX] Fixed a crash that was occurring when dismissing `View Controllers` that are presented modally.
+
+#### Version 6.3.0
+* [NEW] Added ability to dynamically switch between Admin and User mode without restarting the app.
+* [UPDATE] Improved `optOut` method to ensure no Interactions are sent when a user is opted out of all tracking.
+
+#### Version 6.2.0
+* [NEW] Added ability to create `WKWebView` URL Interaction paths in ONE directly through the Admin mode interface.
+* [UPDATE] Aligned `disableAutomaticInteractionDetection` with `excludeInteractionPath` to fully disable the ONE SDK from interacting with the View Controller when the method is called.
+* [UPDATE] Added more granular framework logging to facilitate better customer support when tracking Interactions.
+* [BUGFIX] Addressed an issue that was occurring when checking [the list of Interactions created under a Touchpoint](https://github.com/thunderheadone/one-sdk-ios#sending-codeless-interactions-based-on-the-list-of-interactions-created-under-a-touchpoint), which could’ve led to some offline Interactions not being sent.
+* [BUGFIX] Fixed a crash that was occuring when reconfiguring the SDK while the device was offline.
+* [BUGFIX] Fixed an issue where Modals were not triggering Interactions in Preview mode.
+
+#### Version 6.1.0
+* [NEW] Added ability to automatically track `WKWebView` Interactions based on the URL loaded. The Interaction for the `ViewController` containing the `WKWebView` will also automatically be sent. To disable this automatic tracking - [see our readme](https://github.com/thunderheadone/one-sdk-ios#disable-wkwebview-tracking).
+
 #### Version 6.0.0
 * [BREAKING] The Thunderhead SDK is now distributed as an XCFramework bundle. The binary contains architecture slices for `arm64`, `armv7` for iOS and `arm64`, `i386, x86_64` for the simulator. For further details on this [see our migration guide](https://github.com/thunderheadone/one-sdk-ios/blob/master/migration-guides/THUNDERHEAD-6.0.0-MIGRATION-GUIDE.md#xcframework-integration).
 * [BREAKING] Updated minimum deployment target to iOS 9.0.
