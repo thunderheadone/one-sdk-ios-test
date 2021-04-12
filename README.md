@@ -1,5 +1,9 @@
 ![Thunderhead SDK](https://github.com/thunderheadone/one-sdk-ios/raw/master/images/Thunderhead_Logo.png)
 
+## Resources
+
+* [Migration Guides](https://github.com/thunderheadone/one-sdk-ios/tree/master/migration-guides)
+
 ## Table of Contents
 
 - [Requirements](#requirements)
@@ -36,6 +40,7 @@
       + [Opt an end-user in for all city/country level tracking](#opt-an-end-user-in-for-all-citycountry-level-tracking)   
     * [Partial opt out/in example](#partial-opt-outin-example)
   * [Disable in-list Optimizations](#disable-in-list-optimizations)
+  * [Disable `WKWebView` tracking](#disable-wkwebview-tracking)
   * [Late initialization and reconfiguration of the SDK](#late-initialization-and-reconfiguration-of-the-sdk)
   * [Manually set a specific Interaction path](#manually-set-a-specific-interaction-path)
   * [Exclude an Interaction](#exclude-an-interaction)
@@ -144,7 +149,7 @@ Specify the *Thunderhead SDK* in your podfile.
 ```txt
 # Thunderhead SDK
     target :YourTargetName do
-    pod 'Thunderhead', '~> 6.0.0'
+    pod 'Thunderhead', '~> 6.3.3'
     end
 ```
 
@@ -300,6 +305,9 @@ Objective-C:
               adminMode:YES
                hostName:@"eu2.thunderhead.com"];
 ```
+
+*Note:*
+- Dynamic configuration of both Admin and User mode is supported.
 
 **You have now successfully integrated the codeless Thunderhead SDK for iOS.**
 
@@ -511,6 +519,23 @@ To disable in-list Optimizations, add the following to your app’s Info.plist f
   <key>Swizzling Options</key>
   <dict>
     <key>DisableInListOptimization</key>
+    <true/>
+  </dict>
+</dict>
+```
+
+### Disable `WKWebView` tracking
+
+To disable `WKWebView` codeless tracking, add the following to your app’s Info.plist file and set `DisableWKWebViewTracking` to `YES` (boolean value).
+
+![Thunderhead Config WKWebView Disable App's Info.plist file](https://github.com/thunderheadone/one-sdk-ios/raw/master/images/ThunderheadConfigWKWebViewInfoPlistEntry.png)
+
+```xml
+<key>Thunderhead Config</key>
+<dict>
+  <key>Swizzling Options</key>
+  <dict>
+    <key>DisableWKWebViewTracking</key>
     <true/>
   </dict>
 </dict>
@@ -1144,6 +1169,8 @@ Objective-C:
 ```
 
 ### Get a structure data
+
+*Please note this API has been deprecated and will be removed in an upcoming release. If you require this API please contact [support@thunderhead.com](mailto:support@thunderhead.com).*
 
 To get a structure data, call `getStructureData` method by passing a structure’s name and a completion block as shown below:
 
