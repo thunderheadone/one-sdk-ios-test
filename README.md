@@ -1,5 +1,9 @@
 ![Thunderhead SDK](https://github.com/thunderheadone/one-sdk-ios/raw/master/images/Thunderhead_Logo.png)
 
+## Resources
+
+* [Migration Guides](https://github.com/thunderheadone/one-sdk-ios/tree/master/migration-guides)
+
 ## Table of Contents
 
 - [Requirements](#requirements)
@@ -35,7 +39,8 @@
       + [Opt an end-user out of all city/country level tracking](#opt-an-end-user-out-of-all-citycountry-level-tracking)
       + [Opt an end-user in for all city/country level tracking](#opt-an-end-user-in-for-all-citycountry-level-tracking)   
     * [Partial opt out/in example](#partial-opt-outin-example)
-  * [Disable in-list Optimizations](#disable-in-list-optimizations)
+  * [Enable in-list Optimizations](#enable-in-list-optimizations)
+  * [Disable `WKWebView` tracking](#disable-wkwebview-tracking)
   * [Late initialization and reconfiguration of the SDK](#late-initialization-and-reconfiguration-of-the-sdk)
   * [Manually set a specific Interaction path](#manually-set-a-specific-interaction-path)
   * [Exclude an Interaction](#exclude-an-interaction)
@@ -63,6 +68,7 @@
   * [Send a location object](#send-a-location-object)
   * [Get a structure data](#get-a-structure-data)
   * [Get Tid](#get-tid)
+  * [Get current configuration](#get-current-configuration)
   * [Access debug information](#access-debug-information)
   * [Identify the framework version](#identify-the-framework-version)
   * [Clear the user profile](#clear-the-user-profile)
@@ -87,7 +93,7 @@ The Thunderhead SDK for iOS supports iOS 9.0 and above.
 + Xcode minimum version: 12.0
 
 *Note:*
-- Xcode versions < 12.0 only support archiving an application with bitcode disabled.
+- Xcode versions < 12.5 only support archiving an application with bitcode disabled.
 
 ## Installation
 
@@ -144,7 +150,7 @@ Specify the *Thunderhead SDK* in your podfile.
 ```txt
 # Thunderhead SDK
     target :YourTargetName do
-    pod 'Thunderhead', '~> 6.0.0'
+    pod 'Thunderhead', '~> 7.1.0'
     end
 ```
 
@@ -300,6 +306,9 @@ Objective-C:
               adminMode:YES
                hostName:@"eu2.thunderhead.com"];
 ```
+
+*Note:*
+- Dynamic configuration of both Admin and User mode is supported.
 
 **You have now successfully integrated the codeless Thunderhead SDK for iOS.**
 
@@ -499,9 +508,9 @@ Objective-C:
 - When opted out, tracking will stop and locally queued data will be removed.
 - For instructions on how to completely remove a user's data from Thunderhead ONE or Salesforce Interaction Studio - see our [api documentation](https://thunderheadone.github.io/one-api/#operation/delete).
 
-### Disable in-list Optimizations
+### Enable in-list Optimizations
 
-To disable in-list Optimizations, add the following to your app’s Info.plist file and set `DisableInListOptimization` to `YES` (boolean value).
+In-list Optimizations are disabled by default. To enable in-list Optimizations, add the following to your app’s Info.plist file and set `DisableInListOptimization` to `false` (boolean value).
 
 ![Thunderhead Config App's Info.plist file](https://github.com/thunderheadone/one-sdk-ios/raw/master/images/ThunderheadConfigInfoPlistEntry.png)
 
@@ -511,6 +520,23 @@ To disable in-list Optimizations, add the following to your app’s Info.plist f
   <key>Swizzling Options</key>
   <dict>
     <key>DisableInListOptimization</key>
+    <false/>
+  </dict>
+</dict>
+```
+
+### Disable `WKWebView` tracking
+
+To disable `WKWebView` codeless tracking, add the following to your app’s Info.plist file and set `DisableWKWebViewTracking` to `YES` (boolean value).
+
+![Thunderhead Config WKWebView Disable App's Info.plist file](https://github.com/thunderheadone/one-sdk-ios/raw/master/images/ThunderheadConfigWKWebViewInfoPlistEntry.png)
+
+```xml
+<key>Thunderhead Config</key>
+<dict>
+  <key>Swizzling Options</key>
+  <dict>
+    <key>DisableWKWebViewTracking</key>
     <true/>
   </dict>
 </dict>
@@ -1145,6 +1171,8 @@ Objective-C:
 
 ### Get a structure data
 
+*Please note this API has been deprecated in version 7.0.0 of the iOS SDK. If you require this API please contact [support@thunderhead.com](mailto:support@thunderhead.com).*
+
 To get a structure data, call `getStructureData` method by passing a structure’s name and a completion block as shown below:
 
 Swift:
@@ -1185,6 +1213,31 @@ Objective-C:
 - This will return the `tid` assigned to the current user as a `NSString`.
 - Retrieving the current `tid` can be useful if you want to monitor the current user in Thunderhead ONE or Salesforce Interaction Studio.
 - The tid can also be used if you need to pass the identity of the current user to another system which sends data to Thunderhead ONE or Salesforce Interaction Studio.
+
+### Get current configuration
+
+To get the current configuration of the SDK, call:
+
+Swift: 
+```swift
+let currentConfiguration = OneConfiguration.currentConfiguration()
+let siteKey = currentConfiguration?.siteKey
+
+// To access configuration properties, you can also call:
+let siteKey = OneConfiguration.shared().siteKey
+```
+
+Objective-C:
+```objective-c
+OneConfiguration *currentConfiguration = [OneConfiguration currentConfiguration];
+NSString *siteKey = currentConfiguration.siteKey;
+
+// To access configuration properties, you can also call:
+NSString *siteKey = [OneConfiguration shared].siteKey;
+```
+
+*Note:*
+- Retrieving the current configuration can be useful to validate your setup, especially if you have multiple configurations in an app.  
 
 ### Access debug information
 
