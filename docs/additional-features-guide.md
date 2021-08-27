@@ -1,7 +1,7 @@
 
 ## Table of Contents
 
-- [Additional features of Thunderhead SDK](#dditional-features-of-thunderhead-sdk)
+- [Additional features of Thunderhead SDK](#additional-features-of-thunderhead-sdk)
   * [Opt an end-user out of or into tracking](#opt-an-end-user-out-of-or-into-tracking)
     * [Opt an end-user out/in of all tracking](#opt-an-end-user-outin-of-all-tracking)
       + [Opt an end-user out of all tracking](#opt-an-end-user-out-of-all-tracking)
