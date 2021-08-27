@@ -21,7 +21,7 @@
   * [For Salesforce Interaction Studio integrations](#for-salesforce-interaction-studio-integrations)
   * [`ViewController`/`View` lifecycle overriding rules](#viewcontrollerview-lifecycle-overriding-rules)
   * [Sending codeless Interactions based on the list of Interactions created under a Touchpoint](#sending-codeless-Interactions-based-on-the-list-of-Interactions-created-under-a-touchpoint)
-- [Additional features](docs/additional-features-guide.md)
+- [Additional features of codeless Thunderhead SDK](docs/additional-features-guide.md)
 - [Troubleshooting guide](#troubleshooting-guide)
 - [Questions or need help](#questions-or-need-help)
   * [Salesforce Interaction Studio support](#salesforce-interaction-studio-support)
