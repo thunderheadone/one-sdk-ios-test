@@ -21,7 +21,7 @@
   * [For Salesforce Interaction Studio integrations](#for-salesforce-interaction-studio-integrations)
   * [`ViewController`/`View` lifecycle overriding rules](#viewcontrollerview-lifecycle-overriding-rules)
   * [Sending codeless Interactions based on the list of Interactions created under a Touchpoint](#sending-codeless-Interactions-based-on-the-list-of-Interactions-created-under-a-touchpoint)
-- [Additional features of codeless Thunderhead SDK](docs/additional-features-guide.md)
+- [Additional features of Thunderhead SDK](docs/additional-features-guide.md)
 - [Troubleshooting guide](#troubleshooting-guide)
 - [Questions or need help](#questions-or-need-help)
   * [Salesforce Interaction Studio support](#salesforce-interaction-studio-support)
@@ -196,9 +196,9 @@ In order to reduce the number of unnecessary Interaction requests sent automatic
 - For a codeless Interaction to be sent by the SDK this Interaction needs to contain at least one Activity Capture Point, Attribute Capture Point, and/or Optimization Point.
 - If you are running the SDK in [User mode](#set-up-the-sdk-in-user-mode-for-app-store-builds), you need to ensure that all Interactions and related points have been fully published, before the SDK will trigger a request.
 
-## Additional features of codeless Thunderhead SDK
+## Additional features of Thunderhead SDK
 
-For additional features of codeless Thunderhead SDK, please follow [Additional Features Guide](docs/additional-features-guide.md).
+For additional features of Thunderhead SDK, please follow [Additional Features Guide](docs/additional-features-guide.md).
 
 ## Troubleshooting guide
 
