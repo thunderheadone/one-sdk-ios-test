@@ -1,6 +1,7 @@
+
 ## Table of Contents
 
-- [Additional features](#additional-features)
+- [Additional features of codeless Thunderhead SDK](#dditional-features-of-codeless-thunderhead-sdk)
   * [Opt an end-user out of or into tracking](#opt-an-end-user-out-of-or-into-tracking)
     * [Opt an end-user out/in of all tracking](#opt-an-end-user-outin-of-all-tracking)
       + [Opt an end-user out of all tracking](#opt-an-end-user-out-of-all-tracking)
@@ -50,7 +51,7 @@
   * [Clear the user profile](#clear-the-user-profile)
 
 
-## Additional features
+## Additional features of codeless Thunderhead SDK
 Follow any of the steps below to access further functions of the SDK. 
 
 You will typically use these functions to extend the codeless functionality, turn off specific codeless functions or if you are adopting a pure programmatic integration. 

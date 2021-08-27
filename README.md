@@ -196,12 +196,13 @@ In order to reduce the number of unnecessary Interaction requests sent automatic
 - For a codeless Interaction to be sent by the SDK this Interaction needs to contain at least one Activity Capture Point, Attribute Capture Point, and/or Optimization Point.
 - If you are running the SDK in [User mode](#set-up-the-sdk-in-user-mode-for-app-store-builds), you need to ensure that all Interactions and related points have been fully published, before the SDK will trigger a request.
 
-## Additional features
+## Additional features of codeless Thunderhead SDK
 
-For additional features of Thunderhead SDK, please follow [Additional Features Guide](docs/additional-features-guide.md).
+For additional features of codeless Thunderhead SDK, please follow [Additional Features Guide](docs/additional-features-guide.md).
 
 ## Troubleshooting guide
-[Troubleshooting guide](TROUBLESHOOTING-GUIDE.md)
+
+For troubleshooting, please follow [Troubleshooting guide](TROUBLESHOOTING-GUIDE.md)
 
 ## Questions or need help
 
