@@ -375,7 +375,7 @@ The response can be passed to the `processResponse` method as a parameter, as sh
 
 You can retrieve a response for a specific automatically triggered Interaction request by adopting the `OneInteractionResponseDelegate` protocol.  Follow the instructions below in order to set up this functionality depending on the object’s class. 
 
-This functionality will not work if [automatic Interaction detection is disabled](https://github.com/thunderheadone/one-sdk-ios#disable-automatic-interaction-detection).  For retrieving the response in sending programmatic Interactions, see [Send an Interaction request and retrieve the response](https://github.com/thunderheadone/one-sdk-ios#send-an-interaction-request-and-retrieve-the-response).
+This functionality will not work if [automatic Interaction detection is disabled](#disable-automatic-interaction-detection).  For retrieving the response in sending programmatic Interactions, see [Send an Interaction request and retrieve the response](#send-an-interaction-request-and-retrieve-the-response).
 
 1. Adopt the `OneInteractionResponseDelegate` protocol in the class definition:
 
