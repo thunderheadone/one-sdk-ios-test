@@ -129,6 +129,8 @@ Objective-C:
 
 #### Set up the SDK in Admin mode for internal distribution
 
+We recommend adding the Admin mode function on your internal builds, behind a debug settings function or on a dedicated build pipeline, as described [here](https://eu2.thunderhead.com/one/help/conversations/how-do-i/mobile/one_integrate_mobile_overview_5_steps/#step-3-deploy-the-admin-mode-build-and-make-available-to-business-users).
+
 To use the framework in Admin mode, simply change the `adminMode` boolean to `true`, as follows:
 
 Swift:
@@ -202,7 +204,7 @@ For additional features of Thunderhead SDK, please follow [Additional Features G
 
 ## Troubleshooting guide
 
-For troubleshooting, please follow [Troubleshooting Guide](TROUBLESHOOTING-GUIDE.md)
+Having trouble with Thunderhead and your iOS project? Visit the [Troubleshooting Guide](TROUBLESHOOTING-GUIDE.md)
 
 ## Questions or need help
 
