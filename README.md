@@ -100,7 +100,7 @@ Complete the following steps to initialize the SDK.
 
 #### Set up the SDK in User mode for App Store builds
 
-To start tracking, capturing, and receiving Optimizations with the Thunderhead SDK in User mode, you must first initialize it with your Thunderhead API parameters. You can find your Thunderhead API parameters on the Thunderhead ONE website or in Salesforce Interaction Studio.
+To start tracking, capturing, and receiving Optimizations with the Thunderhead SDK in User mode, you must first initialize it with your Thunderhead API parameters. You can find your Thunderhead API parameters on the [Thunderhead ONE website](https://eu2.thunderhead.com/one/help/conversations/how-do-i/mobile/one_integrate_mobile_find_integration_info/) or in [Salesforce Interaction Studio](https://eu2.thunderhead.com/one/help/interaction-studio/how-do-i/mobile/one_integrate_mobile_find_integration_info/).
 
 With your parameters ready at hand, add the following lines to the top of the `didFinishLaunchingWithOptions`:
 
@@ -202,7 +202,7 @@ For additional features of Thunderhead SDK, please follow [Additional Features G
 
 ## Troubleshooting guide
 
-For troubleshooting, please follow [Troubleshooting guide](TROUBLESHOOTING-GUIDE.md)
+For troubleshooting, please follow [Troubleshooting Guide](TROUBLESHOOTING-GUIDE.md)
 
 ## Questions or need help
 
