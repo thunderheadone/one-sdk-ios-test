@@ -33,7 +33,7 @@ For native integration, simply follow the steps outlined under the installation 
 
   - Install the following:
     
-    * Xcode 12.0 or later
+    * Xcode 13.0 or later
 
     * [CocoaPods](https://cocoapods.org) 1.10.0 or later
 
@@ -44,7 +44,7 @@ For native integration, simply follow the steps outlined under the installation 
   - Set up a physical iOS device or use the iOS simulator to run your app.
 
 *Note:*
-- Xcode versions < 12.5 only support archiving an application with bitcode disabled.
+- Xcode versions < 13.0 only support archiving an application with bitcode disabled.
 
 ## Step 1: Add the Thunderhead SDK to your app
 
@@ -209,7 +209,7 @@ Having trouble with Thunderhead and your iOS project? Visit the [Troubleshooting
 ## Questions or need help
 
 ### Salesforce Interaction Studio support
-_For Salesforce Marketing Cloud Interaction Studio questions, please submit a support ticket via https://help.salesforce.com/home_
+_For Salesforce Marketing Cloud Interaction Studio questions, please submit a support ticket via https://help.salesforce.com/home_.
 
 ### Thunderhead ONE support
-_The Thunderhead team is available 24/7 to answer any questions you have. Just email [onesupport@thunderhead.com](mailto:onesupport@thunderhead.com) or visit our docs page for more detailed installation and usage information._
+_For Thunderhead ONE questions, please submit a support ticket via https://support.thunderhead.com.
