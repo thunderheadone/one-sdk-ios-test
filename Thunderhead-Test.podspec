@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name                = "Thunderhead-Test"
-  s.version             = "6.1.1"
+  s.version             = "6.1.2"
   s.summary             = "The Thunderhead Test SDK for iOS, for integrating the ONE Engagement Hub or Interaction Studio into your iOS application."
   s.authors             = { "Thunderhead Test ONE" => "onesupport@thunderhead-test.com"}
   s.homepage            = "https://github.com/thunderheadone/one-sdk-ios-test"
