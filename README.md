@@ -20,7 +20,7 @@
 - [Additional codeless integration considerations](#additional-codeless-integration-considerations)
   * [For Salesforce Interaction Studio integrations](#for-salesforce-interaction-studio-integrations)
   * [`ViewController`/`View` lifecycle overriding rules](#viewcontrollerview-lifecycle-overriding-rules)
-  * [Sending codeless Interactions based on the list of Interactions created under a Touchpoint](#sending-codeless-Interactions-based-on-the-list-of-Interactions-created-under-a-touchpoint)
+  * [Sending Interaction requests based on the Interaction map](#sending-interaction-requests-based-on-the-interaction-map)
 - [Additional features of Thunderhead SDK](docs/additional-features-guide.md)
 - [Troubleshooting guide](#troubleshooting-guide)
 - [Questions or need help](#questions-or-need-help)
@@ -33,7 +33,7 @@ For native integration, simply follow the steps outlined under the installation 
 
   - Install the following:
     
-    * Xcode 12.0 or later
+    * Xcode 13.0 or later
 
     * [CocoaPods](https://cocoapods.org) 1.10.0 or later
 
@@ -44,7 +44,7 @@ For native integration, simply follow the steps outlined under the installation 
   - Set up a physical iOS device or use the iOS simulator to run your app.
 
 *Note:*
-- Xcode versions < 12.5 only support archiving an application with bitcode disabled.
+- Xcode versions < 13.0 only support archiving an application with bitcode disabled.
 
 ## Step 1: Add the Thunderhead SDK to your app
 
@@ -100,7 +100,12 @@ Complete the following steps to initialize the SDK.
 
 #### Set up the SDK in User mode for App Store builds
 
-To start tracking, capturing, and receiving Optimizations with the Thunderhead SDK in User mode, you must first initialize it with your Thunderhead API parameters. You can find your Thunderhead API parameters on the [Thunderhead ONE website](https://eu2.thunderhead.com/one/help/conversations/how-do-i/mobile/one_integrate_mobile_find_integration_info/) or in [Salesforce Interaction Studio](https://eu2.thunderhead.com/one/help/interaction-studio/how-do-i/mobile/one_integrate_mobile_find_integration_info/).
+To start tracking, capturing, and receiving Optimizations with the Thunderhead SDK in User mode, you must first initialize it with your Thunderhead API parameters. 
+You can find your Thunderhead API parameters on the _API Credentials_ page in Thunderhead ONE or Salesforce Interaction Studio.
+
+For more information on finding these parameters: 
+* For **Thunderhead ONE** integrations, see [Find the Information required when Integrating ONE with your Mobile Solutions](https://permalink.thunderhead.com/mobile-docs/one-mobile-integration-info) 
+* For **Salesforce Interaction Studio** integrations, see [Find the Information required when Integrating Interaction Studio with your Mobile App](https://permalink.thunderhead.com/mobile-docs/is-mobile-integration-info) 
 
 With your parameters ready at hand, add the following lines to the top of the `didFinishLaunchingWithOptions`:
 
@@ -110,7 +115,7 @@ One.startSessionWithSK("ONE-XXXXXXXXXX-1022",
                     uri:"myAppsNameURI",
                  apiKey:"f713d44a-8af0-4e79-ba7e-xxxxxxxxxxxxxxxx",
            sharedSecret:"bb8bacb2-ffc2-4c52-aaf4-xxxxxxxxxxxxxxxx",
-                 userId:"api@yourCompanyName",
+                 userId:"api@yourCompanyName", // For Interaction Studio integrations use a numeric user id - see https://permalink.thunderhead.com/mobile-docs/is-mobile-integration-info-credentials
               adminMode:false,
                hostName:"eu2.thunderhead.com")
 ```
@@ -122,7 +127,7 @@ Objective-C:
                     uri:@"myAppsNameURI"
                  apiKey:@"f713d44a-8af0-4e79-ba7e-xxxxxxxxxxxxxxxx"
            sharedSecret:@"bb8bacb2-ffc2-4c52-aaf4-xxxxxxxxxxxxxxxx"
-                 userId:@"api@yourCompanyName"
+                 userId:@"api@yourCompanyName" // For Interaction Studio integrations use a numeric user id - see https://permalink.thunderhead.com/mobile-docs/is-mobile-integration-info-credentials
               adminMode:NO
                hostName:@"eu2.thunderhead.com"];
 ```
@@ -139,7 +144,7 @@ One.startSessionWithSK("ONE-XXXXXXXXXX-1022",
                     uri:"myAppsNameURI",
                  apiKey:"f713d44a-8af0-4e79-ba7e-xxxxxxxxxxxxxxxx",
            sharedSecret:"bb8bacb2-ffc2-4c52-aaf4-xxxxxxxxxxxxxxxx",
-                 userId:"api@yourCompanyName",
+                 userId:"api@yourCompanyName", // For Interaction Studio integrations use a numeric user id - see https://permalink.thunderhead.com/mobile-docs/is-mobile-integration-info-credentials
               adminMode:true,
                hostName:"eu2.thunderhead.com")
 ```
@@ -151,7 +156,7 @@ Objective-C:
                     uri:@"myAppsNameURI"
                  apiKey:@"f713d44a-8af0-4e79-ba7e-xxxxxxxxxxxxxxxx"
            sharedSecret:@"bb8bacb2-ffc2-4c52-aaf4-xxxxxxxxxxxxxxxx"
-                 userId:@"api@yourCompanyName"
+                 userId:@"api@yourCompanyName" // For Interaction Studio integrations use a numeric user id - see https://permalink.thunderhead.com/mobile-docs/is-mobile-integration-info-credentials
               adminMode:YES
                hostName:@"eu2.thunderhead.com"];
 ```
@@ -189,7 +194,7 @@ The framework listens to a number of `UIViewController` and `UIView` methods to 
 
 If you use these methods in your code, please ensure to call super when implementing them.
 
-### Sending codeless Interactions based on the list of Interactions created under a Touchpoint
+### Sending Interaction requests based on the Interaction map
 
 In order to reduce the number of unnecessary Interaction requests sent automatically by the SDK, only codeless Interactions with explicit Interaction paths created under a Touchpoint and configured with at least one point are sent to Thunderhead ONE or Salesforce Interaction Studio. This configuration change has been introduced in version 5.3.0 of the iOS SDK.
 
@@ -209,7 +214,7 @@ Having trouble with Thunderhead and your iOS project? Visit the [Troubleshooting
 ## Questions or need help
 
 ### Salesforce Interaction Studio support
-_For Salesforce Marketing Cloud Interaction Studio questions, please submit a support ticket via https://help.salesforce.com/home_
+_For Salesforce Marketing Cloud Interaction Studio questions, please submit a support ticket via https://help.salesforce.com/home_.
 
 ### Thunderhead ONE support
-_The Thunderhead team is available 24/7 to answer any questions you have. Just email [onesupport@thunderhead.com](mailto:onesupport@thunderhead.com) or visit our docs page for more detailed installation and usage information._
+_For Thunderhead ONE questions, please submit a support ticket via https://support.thunderhead.com_.
