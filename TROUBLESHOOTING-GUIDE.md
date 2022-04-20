@@ -4,12 +4,11 @@ The Thunderhead SDK for iOS Troubleshooting Guide for common implementation issu
 
 - [Installation and archiving troubleshooting](#installation-and-archiving-troubleshooting)
   * [No such module 'Thunderhead' Xcode compile error](#no-such-module--thunderhead--xcode-compile-error)
+  * [CocoaPods could not find compatible versions for pod "Thunderhead" error](#cocoapods-could-not-find-compatible-versions-for-pod--thunderhead--error)
   * [Resolve `Undefined symbols for architecture arm64` compile time error](#resolve--undefined-symbols-for-architecture-arm64--compile-time-error)
   * [Archive Error SPM - Found an unexpected Mach-O header code: 0x72613c21](#archive-error-spm---found-an-unexpected-mach-o-header-code--0x72613c21)
-- [How to resolve `UITableView` layout display issues](#how-to-resolve--uitableview--layout-display-issues)
-  * [Resolve `UITableView` layout issue by implementing `tableView:heightForRowAtIndexPath:`](#resolve--uitableview--layout-issue-by-implementing--tableview-heightforrowatindexpath--)
-  * [Disable the in-list Optimizations feature via App's Info.plist](#disable-the-in-list-optimizations-feature-via-apps-infoplist)
-  * [Disable `WKWebView` tracking via App's Info.plist](#disable--wkwebview--tracking-via-apps-infoplist)
+- [How to resolve `WKWebView` tracking issues](#how-to-resolve-wkwebview-tracking-issues)
+  * [Disable `WKWebView` tracking via App's Info.plist](#disable-wkwebview-tracking-via-apps-infoplist)
 - [Identify why automatic Interaction requests may not be triggered for a View Controller](#identify-why-automatic-interaction-requests-may-not-be-triggered-for-a-view-controller)
   * [Ensure you are calling `super` when overriding View Controller lifecycle methods](#ensure-you-are-calling--super--when-overriding-view-controller-lifecycle-methods)
     + [How to identify when this is the issue](#how-to-identify-when-this-is-the-issue)
@@ -23,6 +22,12 @@ The Thunderhead SDK for iOS Troubleshooting Guide for common implementation issu
 When integrating the Thunderhead SDK manually into your app, you may encounter this compile error.
 
 To resolve this, navigate to **Build Settings**, ensure the **Framework Search Paths** contains the framework filepath. If the framework is placed in your project directory, simply set the framework search path to `$(SRCROOT)` and set it to recursive.
+
+### CocoaPods could not find compatible versions for pod "Thunderhead" error
+
+After the Thunderhead SDK gets released to CocoaPods, there might be a delay of 2-4 hours or more before the Thunderhead pod actually goes live and becomes available to be installed through CocoaPods. Please, make sure the GitHub [SDK latest version](https://github.com/thunderheadone/one-sdk-ios/releases) matches the [CocoaPods version](https://cocoapods.org/pods/Thunderhead).
+
+If the latest Thunderhead SDK version is already available in [CocoaPods](https://cocoapods.org/pods/Thunderhead), but you still have issues integrating the latest Thunderhead pod into your project, please try running the [`pod update`](https://guides.cocoapods.org/using/pod-install-vs-update.html#pod-update) and `pod repo update` command in your project's directory in Terminal.
 
 ### Resolve `Undefined symbols for architecture arm64` compile time error
 
@@ -50,42 +55,9 @@ rm -rf "${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app/Frameworks/Thunderhead.framework
 
 - Please note this issue has already been reported to Apple's Swift Team. To track this bug [click here](https://bugs.swift.org/browse/SR-13343).
 
-## How to resolve `UITableView` layout display issues
+## How to resolve `WKWebView` tracking issues
 
-If you come across issues with how the layout is rendered in your `UITableView`'s, try the following:
-
-### Resolve `UITableView` layout issue by implementing `tableView:heightForRowAtIndexPath:`
-- Implement the `tableView:heightForRowAtIndexPath:` delegate method in the view controller. The method implementation is required to enable the SDK swizzling implementation to call the original implementation in all your view controllers where you are looking to display in-list Optimizations.
-
-Swift:
-```swift
-func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat { 
-     return UITableViewAutomaticDimension
-}
-```
-
-Objective-C:
-```objective-c
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewAutomaticDimension;
-}
-```
-
-### Disable the in-list Optimizations feature via App's Info.plist
-- Disable the in-list Optimizations feature by adding the following config to your app’s `Info.plist` file and set `DisableInListOptimization` to `true` (boolean value).
-
-![Thunderhead Config App's Info.plist file](images/ThunderheadConfigInfoPlistEntry.png)
-
-```xml
-<key>Thunderhead Config</key>
-<dict>
-  <key>Swizzling Options</key>
-  <dict>
-    <key>DisableInListOptimization</key>
-    <true/>
-  </dict>
-</dict>
-```
+If you come across issues with `WKWebView` tracking, try the following:
 
 ### Disable `WKWebView` tracking via App's Info.plist
 - Disable `WKWebView` codeless tracking by adding the following to your app’s Info.plist file and set `DisableWKWebViewTracking` to `YES` (boolean value).
@@ -160,7 +132,7 @@ These are **Apple error logs** logging *all* failed outgoing network connections
 - Disable the OS (Operating System) Logs by setting `OS_ACTIVITY_MODE` = `disable` in your App Scheme Configuration. 
     - See [here](https://stackoverflow.com/questions/37800790/hide-strange-unwanted-xcode-logs)
 - Or, if you require to see the OS logs and only want to filter Thunderhead SDK's network calls, you can temporarily opt out an end-user from all tracking.  
-  - See [here](docs/additional-features-guide.md#opt-an-end-user-outin-of-all-tracking)
+	- See [here](docs/additional-features-guide.md#opt-an-end-user-outin-of-all-tracking)
 
 ## RxSwift 
 

@@ -1,3 +1,73 @@
+#### Version 9.1.0
+* [NEW] Added ability to dynamically capture data from other SDKs. For further details on this see [our readme](https://github.com/thunderheadone/one-sdk-ios/blob/master/docs/additional-features-guide.md#capture-data-from-other-sdks). 
+* [UPDATE] Xcode 13.2 compatible SDK.
+
+#### Version 9.0.0
+* [BREAKING] Removed the in-list optimization functionality from the SDK.
+* [NEW] Added ability to dynamically switch Workspace configuration while in Admin mode. You can now switch to other spaces easily by simply navigating to the Preview panel in Admin mode and pointing the SDK configuration to another space.
+* [NEW] Added ability to send SDK logs to a file while in Admin mode for easy sharing without needing developer support. You can now switch on SDK logging by navigating to the Preview panel in Admin mode. Once you’ve reproduced the issue, return to the same screen to share the logs.
+
+#### Version 8.0.0
+* [BREAKING] Added support for using the Thunderhead SDK with Xcode 13.0. The Thunderhead SDK now requires Xcode 13+ (iOS 15). For further details on this [see our readme](https://github.com/thunderheadone/one-sdk-ios#prerequisites).
+* [NEW] Added ability to create entities in Admin mode and codelessly send app preference data for a region to ONE based on configuration.
+* [NEW] Added support for Navigation Bars in Admin mode to address iOS 15 changes.
+* [UPDATE] Improved codeless tracking to only send outbound link requests based on the Interaction Points specifically configured under the Touchpoint.
+
+#### Version 7.1.0
+* [NEW] Added ability to get the current SDK configuration.  For more info, see [our readme](https://github.com/thunderheadone/one-sdk-ios#get-current-configuration).
+
+#### Version 7.0.0
+* [BREAKING] Added support for using the Thunderhead SDK with Xcode 12.5. If you are using an older version of Xcode, you will only be able to archive your app with bitcode disabled.
+* [BREAKING] JSON Assets no longer contain HTML encoded entities and the SDK no longer attempts to remove HTML encoded entities. If you still require the old encoding to be returned, please reach out to our [support team](https://github.com/thunderheadone/one-sdk-ios#thunderhead-one-support).
+* [BREAKING] Removed deprecated `optOut` method from Thunderhead SDK. For further details on this [see our migration guide](https://github.com/thunderheadone/one-sdk-ios/blob/master/migration-guides/THUNDERHEAD-7.0.0-MIGRATION-GUIDE.md#optout-method).
+* [UPDATE] Deprecated `getStructure` SDK API. For further details on this [see our readme](https://github.com/thunderheadone/one-sdk-ios#get-a-structure-data).
+* [UPDATE] Improved codeless Interactions tracking when presenting or dismissing (with or without swipe gestures) `View Controller`s modally.
+* [UPDATE] Device data is now sent with all runtime requests.
+* [BUGFIX] Fixed an issue where regions were not highlighted properly in Edit mode for `View Contrioller`s presented modally.
+* [BUGFIX] Fixed an issue where optimizations were not shown after dismissing a Modal.
+* [BUGFIX] Fixed an issue where a wrong optimization could have been shown on a Modal.
+
+#### Version 6.3.8
+* [UPDATE] Disabled mini in-list optimizations by default. To continue using this feature you will need to specifically enable this as outlined in [our readme](https://github.com/thunderheadone/one-sdk-ios#enable-in-list-optimizations).
+
+#### Version 6.3.7
+* [BUGFIX] Fixed a crash related to long pressing an embedded link when previewing web URLs.
+
+#### Version 6.3.6
+* [BUGFIX] Fixed a crash related to a callout menu view presented from `UIDatePickerView` or long pressing on `UINavigationBar` back button.
+
+#### Version 6.3.5
+* [BUGFIX] Fixed an issue where `SFSafariViewController` could crash with a URL containing encoded characters.
+
+#### Version 6.3.4
+* [BUGFIX] Fixed an issue where in some cases a `View Controller` presented modally caused a memory leak.
+
+#### Version 6.3.3
+* [BUGFIX] Fixed a crash related to handling a deallocated `View Controller` hosting `WKWebView`.
+
+#### Version 6.3.2
+* [BUGFIX] Fixed a crash related to handling `View Controllers` that are deallocated.
+* [BUGFIX] Fixed an issue where codeless Interactions may not be sent after dismissing a `View Controller` that was presented modally.
+
+#### Version 6.3.1
+* [BUGFIX] Fixed a crash that was occurring when tracking WKWebView interactions.
+* [BUGFIX] Fixed a crash that was occurring when dismissing `View Controllers` that are presented modally.
+
+#### Version 6.3.0
+* [NEW] Added ability to dynamically switch between Admin and User mode without restarting the app.
+* [UPDATE] Improved `optOut` method to ensure no Interactions are sent when a user is opted out of all tracking.
+
+#### Version 6.2.0
+* [NEW] Added ability to create `WKWebView` URL Interaction paths in ONE directly through the Admin mode interface.
+* [UPDATE] Aligned `disableAutomaticInteractionDetection` with `excludeInteractionPath` to fully disable the ONE SDK from interacting with the View Controller when the method is called.
+* [UPDATE] Added more granular framework logging to facilitate better customer support when tracking Interactions.
+* [BUGFIX] Addressed an issue that was occurring when checking [the list of Interactions created under a Touchpoint](https://github.com/thunderheadone/one-sdk-ios#sending-codeless-interactions-based-on-the-list-of-interactions-created-under-a-touchpoint), which could’ve led to some offline Interactions not being sent.
+* [BUGFIX] Fixed a crash that was occuring when reconfiguring the SDK while the device was offline.
+* [BUGFIX] Fixed an issue where Modals were not triggering Interactions in Preview mode.
+
+#### Version 6.1.0
+* [NEW] Added ability to automatically track `WKWebView` Interactions based on the URL loaded. The Interaction for the `ViewController` containing the `WKWebView` will also automatically be sent. To disable this automatic tracking - [see our readme](https://github.com/thunderheadone/one-sdk-ios#disable-wkwebview-tracking).
+
 #### Version 6.0.0
 * [BREAKING] The Thunderhead SDK is now distributed as an XCFramework bundle. The binary contains architecture slices for `arm64`, `armv7` for iOS and `arm64`, `i386, x86_64` for the simulator. For further details on this [see our migration guide](https://github.com/thunderheadone/one-sdk-ios/blob/master/migration-guides/THUNDERHEAD-6.0.0-MIGRATION-GUIDE.md#xcframework-integration).
 * [BREAKING] Updated minimum deployment target to iOS 9.0.

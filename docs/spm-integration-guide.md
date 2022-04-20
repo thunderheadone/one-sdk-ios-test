@@ -6,27 +6,29 @@ Swift Package Manager support requires Xcode 12.5 or higher.
 
 1. Optionally, if you're adding Thunderhead SDK to a project for the first time, this step can be ignored. If migrating from a CocoaPods-based project, run `pod deintegrate` to remove CocoaPods from your Xcode project. The CocoaPods-generated `.xcworkspace` file can safely be deleted afterward.
 
-2. In Xcode, install the Thunderhead framework by navigating to **File > Swift Packages > Add Package Dependency…** You might need to select your project in the next window if there are multiple projects in your workspace. 
+2. In Xcode, install the Thunderhead framework by navigating to **File > Add Packages…**
 
 3. In the prompt that appears, select the Thunderhead GitHub repository:
  
    ```sh
-   https://github.com/thunderheadone/one-sdk-ios.git
+   https://github.com/thunderheadone/one-sdk-ios
    ```
 
    ![Thunderhead Add Package](https://github.com/thunderheadone/one-sdk-ios/raw/master/images/SPM/ThunderheadAddPackageURL.png)
 
 2. Select the version of Thunderhead SDK you want to use. For new projects, we recommend using the newest version of Thunderhead SDK, which you can find [here](https://github.com/thunderheadone/one-sdk-ios/releases). 
 
-   By default, `Up to Next Major` version is selected. 
+   By default, `Up to Next Major` version is selected.
+   
+   You might need to select your project in this window if there are multiple projects in your workspace. 
 
    To integrate a specific version of the Thunderhead SDK, simply specify a version number you need. 
 
-   For example, to integrate version 6.0.0 of the Thunderhead SDK, specify the version number like on the screenshot below:
+   For example, to integrate version 8.0.0 of the Thunderhead SDK, specify the version number like on the screenshot below:
 
    ![Thunderhead Choose Package Version](https://github.com/thunderheadone/one-sdk-ios/raw/master/images/SPM/ThunderheadChoosePackage.png)
 
-3. Wait for Xcode to finish downloading and resolving the Swift package into your project.
+3. Hit **Add Package** and wait for Xcode to finish verifying and downloading the Swift package into your project.
 
    ![Thunderhead Cloning Package](https://github.com/thunderheadone/one-sdk-ios/raw/master/images/SPM/ThunderheadFetchPackage.png)
 
